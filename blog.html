@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog -- This is blog for my own created</title>
+    <!-- DaisyUI and Tailwind CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Kit CDN Link -->
+    <script src="https://kit.fontawesome.com/5c54d19429.js" crossorigin="anonymous"></script>
+
+    <!-- Poppins Font Family Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        basicClr: '#f4f7ff',
+                        textClr: '#00303C',
+                        basicBg: '#f4f7ff'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    },
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins text-textClr bg-basicBg p-4 min-h-screen">
+    <header class="text-textClr lg:w-11/12 mx-auto">
+        <nav class=" border border-gray-200 rounded-2xl navbar bg-white px-6">
+            <div class="flex-1">
+                <img class="" src="./assets/logo.png" alt="">
+                <h1 class=" text-3xl lg:flex hidden">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex-none" id="back-to-desk-btn">
+                <button class="btn btn-primary">
+                    Back to Desk
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex justify-center py-4 font-bold text-2xl">
+        <h2 id="">
+            Blogs
+        </h2>
+    </div>
+
+    <!-- main section -->
+    <main class="text-textClr lg:w-11/12 mx-auto">
+        <section>
+            <!-- 1st Question -->
+            <div class="bg-white rounded-2xl border border-gray-300 mb-6">
+                <h2 class="p-4 font-semibold text-xl ">
+                    Question-1: What are the different ways to select an element in the DOM?
+                </h2>
+                <hr class="border-b-2 border-dashed border-gray-400">
+                <div class="p-4">
+                    <span class="font-semibold">=>Different Ways to Select an Element in the DOM :</span>
+                    <p>
+                        1. Selecting by Id (getElementById) <br>
+                        2. Selecting by Class (getElementsByClassName) <br>
+                        3. Selecting by Tag Name (getElementByTagname) <br>
+                        4. Selecting by Query Selector (querySelector) <br>
+                        5. Selecting Multiple Elements (querySelectorAll)
+                    </p>
+                </div>
+            </div>
+            <!-- 2nd Question -->
+            <div class="bg-white rounded-2xl border border-gray-300 mb-6">
+                <h2 class="p-4 font-semibold text-xl ">
+                    Question-2: What is the difference between innerHTML, innerText, and textContent ?
+                </h2>
+                <hr class="border-b-2 border-dashed border-gray-400">
+                <div class="p-4">
+                    <span class="font-semibold">=>Difference Between innerHTML, innerText, and textContent in
+                        JavaScript</span>
+                    <p>
+                        <span class="font-semibold">1. innerHTML : </span> Returns or sets the HTML inside an element,
+                        including tags.<br>
+                        <span class="font-semibold">2. innerText : </span> Returns or sets only visible text, ignoring
+                        hidden elements and extra spaces.<br>
+                        <span class="font-semibold">3. textContent : </span> Returns or sets all text, including hidden
+                        elements, without parsing HTML.
+                    </p>
+                </div>
+            </div>
+            <!-- 3rd Question -->
+            <div class="bg-white rounded-2xl border border-gray-300 mb-6">
+                <h2 class="p-4 font-semibold text-xl ">
+                    Question-3: What is event delegation in the DOM?
+                </h2>
+                <hr class="border-b-2 border-dashed border-gray-400">
+                <div class="p-4">
+                    <span class="font-semibold">=>Event Delegation in the DOM 🚀 :</span>
+                    <p>
+                        Event delegation is a technique in JavaScript where instead of adding event listeners to
+                        multiple child elements, you
+                        add a single event listener to a parent element. The event then "bubbles up" from the child
+                        elements to the parent,
+                        allowing you to handle all child elements efficiently.
+                    </p>
+                </div>
+            </div>
+            <!-- 4th Question -->
+            <div class="bg-white rounded-2xl border border-gray-300 mb-6">
+                <h2 class="p-4 font-semibold text-xl ">
+                    Question-4: What is event bubbling in the DOM?
+                </h2>
+                <hr class="border-b-2 border-dashed border-gray-400">
+                <div class="p-4">
+                    <p>
+                        Event bubbling is a concept in JavaScript where an event triggered on a child element "bubbles
+                        up" to its parent
+                        elements, all the way up to the &lt;html&gt; element.
+                    </p>
+                </div>
+            </div>
+            <!-- 3rd Question -->
+            <div class="bg-white rounded-2xl border border-gray-300 mb-6">
+                <h2 class="p-4 font-semibold text-xl ">
+                    Question-5: How do you create, add, and remove elements using JavaScript?
+                </h2>
+                <hr class="border-b-2 border-dashed border-gray-400">
+                <div class="p-4">
+                    <p>
+                        In JavaScript, we can create, add, and remove elements dynamically using the DOM API.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script/toggole.js"></script>
+</body>
+
+</html>
