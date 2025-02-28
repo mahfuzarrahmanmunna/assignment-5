@@ -2,7 +2,7 @@ function indexHtml() {
     const btn = document.getElementById('discover-something');
     if (btn) {
         btn.addEventListener('click', () => {
-            window.location.href = '/main.html'
+            window.location.href = '/blogs.html'
         })
     }
 }
