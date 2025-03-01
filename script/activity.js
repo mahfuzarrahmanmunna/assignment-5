@@ -3,6 +3,8 @@
 
 function clickButton() {
     let buttons = document.getElementsByClassName('define-btn');
+    let completedCount = 0;
+    const totalTask = buttons.length;
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function () {
@@ -28,31 +30,42 @@ function clickButton() {
 
             alert(`Board updated Successfully`);
 
-
+            // Disable the button
+            this.disabled = true;
+            this.classList.add('opacity-90', 'cursor-not-allowed')
 
 
 
             // Disable the button
-            this.disabled = true;
-            this.classList.add('opacity-90', 'cursor-not-allowed');
-
-            // Find the "Task Assigned" element and decrease the count
-            let taskAssignedElement = document.getElementById('decrement'); // Adjust this selector if needed
-            let taskCount = parseInt(taskAssignedElement.innerText);
+            let taskAssignedDecrement = document.getElementById('decrement');
+            let taskCount = parseInt(taskAssignedDecrement.innerText);
             if (taskCount > 0) {
-                taskAssignedElement.innerText = taskCount - 1;
+                taskAssignedDecrement.innerText = taskCount - 1
             }
 
-            // Find the navbar task count and increase it
+            // Increment 
             let navbarCountElement = document.querySelector('li.text-3xl span'); // Adjust this selector if needed
             let navbarCount = parseInt(navbarCountElement.innerText);
             navbarCountElement.innerText = navbarCount + 1;
+
+
+            // track completed task
+            completedCount++
+            if (completedCount == totalTask) {
+                alert('Congrats!!! You have completed all the current task')
+            }
         });
     }
 }
 
 clickButton();
 
-function clearDataFunc() {
-    
+
+function clearHistoryData() {
+    document.getElementById('clear-history').addEventListener('click', () => {
+        document.getElementById('new-creation').innerText = ''
+    })
 }
+clearHistoryData()
+
+
