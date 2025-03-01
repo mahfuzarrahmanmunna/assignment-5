@@ -66,6 +66,6 @@ function clearHistoryData() {
         document.getElementById('new-creation').innerText = ''
     })
 }
-clearHistoryData()
+clearHistoryData();
 
 
