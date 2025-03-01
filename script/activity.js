@@ -8,18 +8,18 @@ function clickButton() {
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function () {
-            let card = this.closest('.p-6');
-
+            let card = this.closest('.card');
             let heading = card.querySelector('.define-heading');
 
             let headingText = heading.innerText;
-            console.log("✅ Found Heading:", headingText);
-
             let newParagraph = document.createElement('p');
+
+
             // initialize date
             let now = new Date();
-            // and date to used time
             let timeNow = now.toLocaleTimeString();
+
+            // new paragraph style
             newParagraph.style.backgroundColor = '#f4f7ff';
             newParagraph.style.padding = '16px';
             newParagraph.style.marginTop = '12px';
